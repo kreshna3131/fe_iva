@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <!-- Font Family Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Family Link End -->
+    <!-- Theme Color and Display Mode -->
+    <meta name="theme-color" content="#171717" />
+    <meta name="msapplication-TileColor" content="#171717" />
+    <meta name="msapplication-TileImage" content="%PUBLIC_URL%/logo.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Orientation -->
+    <meta name="orientation" content="portrait" />
+    <title>Job Connect</title>
+  </head>
+  <body>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('%PUBLIC_URL%/serviceWorker.js').then(
+            function (registration) {
+              console.log('Service Worker registration successful with scope: ',
+    
+                registration.scope);
+            },
+            function (err) {
+              console.log('Service Worker registration failed: ', err);
+            }
+          );
+        });
+      }
+
+      
+    </script>
+    <div id="root"></div>
+  </body>
+</html>
